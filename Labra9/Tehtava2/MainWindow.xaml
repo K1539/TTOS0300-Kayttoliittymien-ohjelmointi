@@ -1,0 +1,16 @@
+﻿<Window x:Class="Tehtava2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava2"
+        mc:Ignorable="d"
+        Title="Euro-Markka muunnin" Height="350" Width="525">
+    <Grid>
+        
+        <Button x:Name="Euroiksi" Content="Euroiksi" HorizontalAlignment="Left" Margin="154,94,0,0" VerticalAlignment="Top" Width="75" Click="Euroiksi_Click"/>
+        <Button x:Name="Markoiksi" Content="Markoiksi" HorizontalAlignment="Left" Margin="345,99,0,0" VerticalAlignment="Top" Width="75" Click="Markoiksi_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="229,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
