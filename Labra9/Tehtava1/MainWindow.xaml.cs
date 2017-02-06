@@ -24,5 +24,18 @@ namespace Tehtava1
         {
             InitializeComponent();
         }
+        int Trucks = 0;
+        int Cars = 0;
+        private void TruckButton_Click(object sender, RoutedEventArgs e)
+        {
+            Trucks++;
+            TruckBox.Text = Convert.ToString(Trucks);
+        }
+
+        private void CarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Cars++;
+            CarBox.Text = Convert.ToString(Cars);
+        }
     }
 }

@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Button x:Name="TruckButton" Content="Trucks" HorizontalAlignment="Left" Margin="148,87,0,0" VerticalAlignment="Top" Width="75" Click="TruckButton_Click"/>
+        <Button x:Name="CarButton" Content="Cars" HorizontalAlignment="Left" Margin="376,87,0,0" VerticalAlignment="Top" Width="75" Click="CarButton_Click"/>
+        <TextBlock x:Name="TruckBox" HorizontalAlignment="Left" Margin="148,143,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="75"/>
         
+        <TextBlock x:Name="CarBox" HorizontalAlignment="Left" Margin="376,143,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
