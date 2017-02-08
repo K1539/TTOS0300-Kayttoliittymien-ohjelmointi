@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <StackPanel>
+            <CheckBox x:Name="ckbMilk" Content="Milk" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckbButter" Content="Butter" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckbBeer" Content="Beer" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckbChicken" Content="Chicken" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <Button x:Name="btnBuy" Content="Buy" Height="20" Width="40" Margin="10" HorizontalAlignment="Left" Click="btnBuy_Click"/>
+            <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="76" Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133"/>
+
+        </StackPanel>
         
     </Grid>
 </Window>

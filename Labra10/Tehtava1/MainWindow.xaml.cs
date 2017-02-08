@@ -20,9 +20,28 @@ namespace Tehtava1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string checkedBoxes;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Check(CheckBox daa)
+        {
+            if ((bool)daa.IsChecked)
+            {
+                checkedBoxes += daa.Content.ToString() + " ";
+            }
+            txtBox.Text = checkedBoxes;
+        }
+
+        private void btnBuy_Click(object sender, RoutedEventArgs e)
+        {
+            Check(ckbBeer);
+            Check(ckbButter);
+            Check(ckbChicken);
+            Check(ckbMilk);
+            checkedBoxes = "";
         }
     }
 }
