@@ -12,12 +12,15 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="1"/>
-            <RowDefinition Height="Auto" MinHeight="36"/>
-            <RowDefinition Height="Auto" MinHeight="256"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Login:" Margin="5"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Login:" Margin="5"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Login:" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Password:" Margin="5"/>
+        <Button x:Name="button" Content="Login" Grid.Column="1" Height="30" Margin="5" Grid.Row="2" Width="75"/>
+        <TextBox x:Name="txtbLogin" Grid.Column="1" Height="23" Margin="5" Width="120"/>
+        <TextBox x:Name="txtbPassword" Grid.Column="1" Grid.Row="1" Height="23" Margin="5" Width="120"/>
+
     </Grid>
 </Window>
