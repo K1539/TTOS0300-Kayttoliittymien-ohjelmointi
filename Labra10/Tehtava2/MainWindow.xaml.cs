@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace Tehtava2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine(txtbLogin.Text);
+            Debug.WriteLine(txtbPassword.Text);
         }
     }
 }
