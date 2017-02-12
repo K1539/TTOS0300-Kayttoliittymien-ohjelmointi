@@ -6,19 +6,25 @@
         xmlns:local="clr-namespace:Tehtava3"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Margin="0,0,77,-48">
-        <TextBlock x:Name="txbChooseGame" HorizontalAlignment="Left" Margin="85,22,0,0" TextWrapping="Wrap" Text="Choose a game" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbbGameModes" HorizontalAlignment="Left" Margin="264,22,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem x:Name="Lotto" IsSelected="True">Lotto</ComboBoxItem>
-            <ComboBoxItem x:Name="VikingLotto" >Viking Lotto</ComboBoxItem>
-            <ComboBoxItem x:Name="EuroJckPt" >Euro Jack Pot</ComboBoxItem>
-        </ComboBox>
-        <TextBlock x:Name="txtbDrawNumber" HorizontalAlignment="Left" Margin="85,58,0,0" TextWrapping="Wrap" Text="Number of draws" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtbxDrawNumber" HorizontalAlignment="Left" Height="23" Margin="264,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnDraw" Content="Draw" HorizontalAlignment="Left" Margin="136,94,0,0" VerticalAlignment="Top" Width="74" Click="btnDraw_Click"/>
-        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="246,94,0,0" VerticalAlignment="Top" Width="75" Click="btnClear_Click"/>
-        <TextBlock x:Name="txtbNumbers" HorizontalAlignment="Left" Margin="60,144,0,0" TextWrapping="Wrap" Text="Random Numbers: " VerticalAlignment="Top"/>
-
-        <TextBox Width="300" Height="200" TextWrapping="Wrap" Margin="40,160,0,0" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+    <Grid Background="BlanchedAlmond">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="105*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Choose a game: " Margin="5,22" VerticalAlignment="Center" Height="16"/>
+        <ComboBox x:Name="comboBox" Grid.Row="0" Margin="0,26,41,18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="101" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Height="16"/>
+        <TextBlock Grid.Row="1" Text="How many Draws: " Margin="5,24,5,21" VerticalAlignment="Center" Height="16" />
+        <TextBox x:Name="txtDraws" Height="62" Text="" VerticalAlignment="Center" HorizontalAlignment="Right" Width="101" Margin="0,44,41,15" Background="BurlyWood" Grid.RowSpan="2"/>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="187,5,188,52" Height="36" Width="142" Grid.RowSpan="2">
+            <Button x:Name="btnDraw" Content="Draw" HorizontalAlignment="Left" Margin="5" Width="61" Height="30" Click="btnDraw_Click"/>
+            <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Right" Margin="5" Width="61" Height="30" Click="btnClear_Click"/>
+        </StackPanel>
+        <TextBlock Grid.Row="3" Text="Random Numbers: " Margin="-1,29,5,11" VerticalAlignment="Center" Height="16"/>
+        <ScrollViewer Grid.Row="4" Margin="5">
+            <TextBlock x:Name="txtNumbers" Text=""/>
+        </ScrollViewer>
     </Grid>
 </Window>

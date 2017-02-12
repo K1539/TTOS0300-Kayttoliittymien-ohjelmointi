@@ -1,0 +1,68 @@
+﻿<Window x:Class="Tehtava4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid VerticalAlignment="Center" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left">
+            <TextBlock Width="auto" Text="Heater" VerticalAlignment="top" HorizontalAlignment="left" FontFamily=" chiller" FontSize="48" Margin="20,0,0,0" Foreground="RosyBrown"/>
+            <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="ultimatum" VerticalAlignment="top" HorizontalAlignment="Right" FontFamily="castellar" FontSize="16" Margin="0,0,0,0" Foreground="#FF971C1C"/>
+
+            <Grid Margin="0,12,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btnTemp" HorizontalContentAlignment="Left" Height="auto" ToolTip="" Content="Temperature:" Margin="20,0,0,0" FontSize="16" Width="auto" FontFamily="Comic sans ms" Foreground="Green" Click="btnTemp_Click"  Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBlock x:Name="txtTemp" Text="0" TextAlignment="Right" HorizontalAlignment="Right" FontSize="16" VerticalAlignment="Center" MaxWidth="70" Width="70"/>
+                <Button x:Name="btnHumi" Grid.Row="1" HorizontalContentAlignment="Left"  Height="auto" Content="Humidity:"  FontSize="16"   Width="auto" FontFamily="Comic sans ms" Click="btnHumi_Click"  Margin="20,0,0,0" Foreground="Green" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBlock x:Name="txtHumi" Grid.Row="1" Text="0" TextAlignment="Right" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" MaxWidth="70" Width="70"/>
+            </Grid>
+
+
+        </StackPanel>
+        <StackPanel FocusManager.FocusedElement="{Binding ElementName=txtInput}"  KeyDown="txtInput_KeyDown" Grid.Column="1" Grid.Row="0" Margin="0,0,20,0">
+            <TextBox x:Name="txtInput" Text="" TextAlignment="Right" Width="auto" Margin="5"  Height="15" BorderBrush="Black" Background="#FFE4E0E0"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnTopLeft" Content="7" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnTopMid" Content="8" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnTopRight" Content="9" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnCancel" Content="&#8592;" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btnCan" Background="#FFFDECB2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
+                <Button x:Name="btnMidLeft" Content="4" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnMidMid" Content="5" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnMidRight" Content="6" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn_Click" Background="#FFFDECB2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
+                <Button x:Name="btnBottomLeft" Content="1" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnBottomMid" Content="2" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnBottomRight" Content="3" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn_Click" Background="#FFFDECB2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
+                <Button x:Name="btnZero" Content="0" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="90" Click="btn_Click" Background="#FFFDECB2"/>
+                <Button x:Name="btnDot" Content="." HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn_Click" Background="#FFFDECB2"/>
+
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal">
+                <RadioButton x:Name="rdbTemp" IsChecked="True" Margin="15,5,5,5" Content="Temperature" Background="White" BorderBrush="#FF7C3B3B"/>
+                <RadioButton x:Name="rdbHumi" Margin="15,5,5,5" Content="Humidity" BorderBrush="#FF632424" Background="White"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="btnOk" Content="ok" HorizontalAlignment="Left" Height="80" Margin="155,60,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="btnOk_Click" Background="#FFFDECB2"/>
+
+    </Grid>
+</Window>
