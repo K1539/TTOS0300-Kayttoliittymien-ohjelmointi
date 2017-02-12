@@ -26,5 +26,6 @@
         <ScrollViewer Grid.Row="4" Margin="5">
             <TextBlock x:Name="txtNumbers" Text=""/>
         </ScrollViewer>
+        
     </Grid>
 </Window>
