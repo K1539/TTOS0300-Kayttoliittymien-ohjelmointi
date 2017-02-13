@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labra11", "Labra11\Labra11.csproj", "{9326AADA-717B-440B-B8EE-DC9AE7FEA220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TunnillaDataBinding", "TunnillaDataBinding\TunnillaDataBinding.csproj", "{B4191376-957B-4713-97C6-151F06C50EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tunnilla2", "Tunnilla2\Tunnilla2.csproj", "{60A74636-9C29-45BF-A437-864B23438AEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9326AADA-717B-440B-B8EE-DC9AE7FEA220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9326AADA-717B-440B-B8EE-DC9AE7FEA220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9326AADA-717B-440B-B8EE-DC9AE7FEA220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9326AADA-717B-440B-B8EE-DC9AE7FEA220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4191376-957B-4713-97C6-151F06C50EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4191376-957B-4713-97C6-151F06C50EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4191376-957B-4713-97C6-151F06C50EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4191376-957B-4713-97C6-151F06C50EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A74636-9C29-45BF-A437-864B23438AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A74636-9C29-45BF-A437-864B23438AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A74636-9C29-45BF-A437-864B23438AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A74636-9C29-45BF-A437-864B23438AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

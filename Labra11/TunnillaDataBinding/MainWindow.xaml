@@ -1,0 +1,18 @@
+﻿<Window x:Class="TunnillaDataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TunnillaDataBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <TextBlock x:Name="textBlock2" Text="{Binding AppName}" FontSize="22" />
+            <Slider x:Name="slider" Maximum="100" LargeChange="10"/>
+            <ProgressBar x:Name="progressBar" Value="{Binding Value, ElementName=slider}"/>
+            <TextBlock x:Name="textBlock" Text="{Binding Value, ElementName=slider}" FontSize="18"/>
+            <TextBox x:Name="textBox" Text="{Binding Value, ElementName=slider, Mode=TwoWay}" FontSize="24" />
+        </StackPanel>
+    </Grid>
+</Window>
