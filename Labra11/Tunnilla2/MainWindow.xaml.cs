@@ -63,29 +63,33 @@ namespace Tunnilla2
 
         private void btnForward_Click(object sender, RoutedEventArgs e)
         {
-            if (counter <= 4 || counter >= 0)
+            if (counter < 5)
             {
                 counter++;
                 spRight.DataContext = joukkueet[counter];
             }
-            else
+            else if (counter >= 5)
             {
                 counter = 0;
+                spRight.DataContext = joukkueet[counter];
             }
+           
+
         }
 
         private void btnBackWard_Click(object sender, RoutedEventArgs e)
         {
-            if (counter <= 4 || counter >= 0)
+            if (counter > 0)
             {
                 counter = counter-1;
                 spRight.DataContext = joukkueet[counter];
             }
-            else
+            else if (counter <= 0)
             {
-                counter = 4;
+                counter = 5;
+                spRight.DataContext = joukkueet[counter];
             }
-            
+
         }
     }
 }
