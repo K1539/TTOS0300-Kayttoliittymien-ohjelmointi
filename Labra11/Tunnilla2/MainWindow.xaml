@@ -53,6 +53,23 @@
             <TextBox x:Name="txtCity" Text="{Binding Path=City}"/>
             <Button x:Name="btnForward" Content="Seuraava" Click="btnForward_Click" />
             <Button x:Name="btnBackWard" Content="Edellinen" Click="btnBackWard_Click" />
+            <TextBlock Text="Uuden joukkueen lisäys:"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="rightLeft" Grid.Column="0">
+                    <TextBlock Text="-Nimi: " Width="Auto" />
+                    <TextBlock Text="-Kaupunki:" Width="Auto"/>
+                </StackPanel>
+                <StackPanel x:Name="rightRight" Grid.Column="1">
+                    <TextBox x:Name="SetName" Width="Auto"/>
+                    <TextBox x:Name="SetCity" Width="Auto"/>
+                </StackPanel>
+            </Grid>
+            <Button x:Name="AssignTeam" Width="Auto" Height="20" Content="Lisää joukkue liigaan!" Click="AssignTeam_Click"/>
+            
         </StackPanel>
     </Grid>
 </Window>
