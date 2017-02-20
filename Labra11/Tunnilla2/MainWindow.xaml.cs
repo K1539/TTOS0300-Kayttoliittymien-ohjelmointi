@@ -22,6 +22,7 @@ namespace Tunnilla2
     /// </summary>
     public partial class MainWindow : Window
     {
+        int x = 5;
         //Koska 
         HockeyLeague liiga;
         HockeyTeam tiimi;
@@ -29,7 +30,7 @@ namespace Tunnilla2
         int counter = 0;
         public MainWindow()
         {
-            
+
             InitializeComponent();
             IniMyStyff();
         }
@@ -46,7 +47,7 @@ namespace Tunnilla2
             //Haetaan SM-Liigajoukkueet
             liiga = new JAMK.ICT.HockeyLeague();
             liiga.GetTeams();
-            
+
             joukkueet = liiga.GetTeams();
             cmbTeams.ItemsSource = joukkueet;
         }
@@ -63,29 +64,38 @@ namespace Tunnilla2
 
         private void btnForward_Click(object sender, RoutedEventArgs e)
         {
-            if (counter <= 4 || counter >= 0)
+            if (counter < x)
             {
                 counter++;
                 spRight.DataContext = joukkueet[counter];
             }
-            else
+            else if (counter >= x)
             {
                 counter = 0;
+                spRight.DataContext = joukkueet[counter];
             }
+
+
         }
 
         private void btnBackWard_Click(object sender, RoutedEventArgs e)
         {
-            if (counter <= 4 || counter >= 0)
+            if (counter > 0)
             {
-                counter = counter-1;
+                counter = counter - 1;
                 spRight.DataContext = joukkueet[counter];
             }
-            else
+            else if (counter == 0)
             {
-                counter = 4;
+                counter = x;
+                spRight.DataContext = joukkueet[counter];
             }
-            
+
+        }
+       
+        public void AssignTeam_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
 
