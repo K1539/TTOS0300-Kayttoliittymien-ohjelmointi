@@ -17,6 +17,7 @@ using JAMK.ICT;
 
 namespace Tunnilla2
 {
+    //https://github.com/olli-k9326
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -95,7 +96,8 @@ namespace Tunnilla2
        
         public void AssignTeam_Click(object sender, RoutedEventArgs e)
         {
-
+            joukkueet.Add(new HockeyTeam(SetName.Text, SetCity.Text));
+            x++;
         }
 
 
