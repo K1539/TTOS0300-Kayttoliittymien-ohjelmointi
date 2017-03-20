@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labra14_WPFvrRails"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="VR Trains Client" Height="350" Width="525">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/VR.png" Opacity="0.5" />
+        </Grid.Background>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="cbStations" ItemsSource="{Binding}" Margin="5" />
+                <Button x:Name="btnGetTrains" Content="Hae lähtevät junat" Margin="5" Click="btnGetTrains_Click"/>
+                <TextBlock x:Name="tbMessage" Text="..." FontSize="14" />
+
+            </StackPanel>
+            <DataGrid x:Name="dgTrains" Margin="10" VerticalAlignment="top" ItemsSource="{Binding}" />
+        </StackPanel>
     </Grid>
 </Window>
